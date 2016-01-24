@@ -1,5 +1,7 @@
 $(document).ready(function() {
-	var app = $(".finleyMatch"),
+	var ua = navigator.userAgent,
+		event = (ua.match(/iPad/i)) ? "touchstart" : "click",
+		app = $(".finleyMatch"),
 		finleyGame = $(".finleyGame"),
 		images = [
 			'finley1.jpg', 'finley1.jpg',
@@ -106,7 +108,7 @@ $(document).ready(function() {
 
 	helper.setNewGame();
 
-	finleyGame.on('click', '.circleWrapper', function() {
+	finleyGame.on(event, '.circleWrapper', function() {
 		var imageString = $(this).data('url');
 			helper.flipCircle($(this), imageString);
 	});
