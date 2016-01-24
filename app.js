@@ -110,12 +110,14 @@ $(document).ready(function() {
 		event;
 
 	if ( userAgent.match( /iPad/i ) || userAgent.match( /iPhone/i ) || userAgent.match( /iPod/i )) {
-		event = 'touchend';
+		event = 'touchend click';
 	} else {
 		event = 'click';
 	}
 
-	finleyGame.on(event, '.circleWrapper', function() {
+	$(document).on(event, '.circleWrapper', function(e) {
+		e.stopPropagation();
+		e.preventDefault();
 		var imageString = $(this).data('url');
 			helper.flipCircle($(this), imageString);
 	});
