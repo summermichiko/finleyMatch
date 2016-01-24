@@ -143,6 +143,10 @@ body {
 	font-weight: 400;
 }
 
+.finleyMatch .playNow:hover {
+	color: #ef073f;
+}
+
 .finleyMatch .downArrow {
 	text-align: center;
 }
@@ -187,15 +191,15 @@ body {
 	margin-bottom: 25px;
 }
 
+.finleyMatch .flipped {
+	-webkit-transform: rotatey(-180deg);
+}
+
 .finleyMatch .circleWrapper {
 	height: 125px;
 	width: 125px;
 	margin: 15px auto;
 	position: relative;
-}
-
-.finleyMatch .flipped {
-	-webkit-transform: rotatey(-180deg);
 }
 
 .finleyMatch .circle {
@@ -221,6 +225,7 @@ body {
 	border-radius: 50%;
 	height: 125px;
 	width: 125px;
+	border: 1px solid #fff;
 }
 .finleyMatch .circle .back {
 	-webkit-transform: rotatey(-180deg);
@@ -231,7 +236,7 @@ body {
 	border-radius: 50%;
 	height: 125px;
 	width: 125px;
-	border: none;
+	border: 1px solid #fff;
 }
 
 /* --------------- MEDIA QUERIES --------------- */
