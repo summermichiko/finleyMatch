@@ -1,7 +1,5 @@
 $(document).ready(function() {
-	var ua = navigator.userAgent,
-		event = (ua.match(/iPad/i)) ? "touchstart" : "click",
-		app = $(".finleyMatch"),
+	var app = $(".finleyMatch"),
 		finleyGame = $(".finleyGame"),
 		images = [
 			'finley1.jpg', 'finley1.jpg',
@@ -107,6 +105,15 @@ $(document).ready(function() {
 		};
 
 	helper.setNewGame();
+
+	var userAgent = navigator.userAgent || navigator.vendor || window.opera,
+		event;
+
+	if ( userAgent.match( /iPad/i ) || userAgent.match( /iPhone/i ) || userAgent.match( /iPod/i )) {
+		event = 'touchend';
+	} else {
+		event = 'click';
+	}
 
 	finleyGame.on(event, '.circleWrapper', function() {
 		var imageString = $(this).data('url');
