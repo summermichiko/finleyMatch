@@ -1,0 +1,263 @@
+/* HTML RESET */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	position: fixed;
+	vertical-align: baseline;
+	position: relative;
+}
+
+/* RESET FOR OLDER BROWSERS */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* --------------- FINLEY MATCH STYLES --------------- */
+body {
+	font-family: Open Sans !important;
+}
+
+/* MODAL */
+.modal .modal-content {
+	border-radius: 0;
+}
+
+.modal .modal-body {
+	padding: 50px;
+	background-color: #fff;
+}
+
+.modal .completionText {
+	text-align: center;
+	margin-bottom: 20px;
+	margin-bottom: 25px;
+}
+
+.modal .buttonWrapper {
+	text-align: center;
+}
+
+.modal button {
+	padding: 13px 15px;
+	border-radius: 2px;
+	color: #fff;
+	border: none;
+}
+
+.modal .playAgainButton {
+	background-color: #efefef;
+	color: #333;
+	margin-right: 5px;
+}
+
+.modal .toPortfolio {
+	background-color: #ef073f;
+}
+
+.modal .playAgainButton:hover {
+	background-color: #e3e3e3;
+}
+
+.modal .toPortfolio:hover {
+	background-color: #cb0636;
+}
+
+.modal button:focus {
+	outline: none;
+}
+
+/* TOP WRAPPER SECTION */
+.finleyMatch .topWrapper {
+	padding-top: 125px;
+	padding-bottom: 125px;
+	background-color: #efefef;
+}
+
+.finleyMatch h1 {
+	margin-top: 0;
+	margin-bottom: 20px;
+	text-align: center;
+	color: #333 !important;
+	font-weight: 400;
+}
+
+.finleyMatch h3 {
+	line-height: 35px;
+	margin-top: 0;
+	margin-bottom: 55px;
+	text-align: center;
+	color: #333 !important;
+	font-weight: 300;
+}
+
+.finleyMatch a {
+	color: #333;
+}
+
+.finleyMatch a:hover {
+	text-decoration: none;
+	color: #333;
+}
+
+.finleyMatch .playNow {
+	text-align: center;
+	color: #ef073f;
+	cursor: pointer;
+	font-size: 24px;
+	font-weight: 400;
+}
+
+.finleyMatch .downArrow {
+	text-align: center;
+}
+
+.finleyMatch .arrowImg {
+	height: 25px;
+	cursor: pointer;
+	-webkit-animation: bounce 2s infinite ease-in-out;
+	-moz-animation: bounce 2s infinite ease-in-out;
+	-o-animation: bounce 2s infinite ease-in-out;
+	-ms-animation: bounce 2s infinite ease-in-out;
+}
+@-webkit-keyframes bounce {
+	0%, 20%, 60%, 100% { -webkit-transform: translateY(0); }
+	40% { -webkit-transform: translateY(-10px); }
+	80% { -webkit-transform: translateY(-5px); }
+}
+@-moz-keyframes bounce {
+	0%, 20%, 60%, 100% { -moz-transform: translateY(0); }
+	40% { -moz-transform: translateY(-10px); }
+	80% { -moz-transform: translateY(-5px); }
+}
+@-o-keyframes bounce {
+	0%, 20%, 60%, 100% { -o-transform: translateY(0); }
+	40% { -o-transform: translateY(-10px); }
+	80% { -o-transform: translateY(-5px); }
+}
+@-ms-keyframes bounce {
+	0%, 20%, 60%, 100% { -ms-transform: translateY(0); }
+	40% { -ms-transform: translateY(-10px); }
+	80% { -ms-transform: translateY(-5px); }
+}
+
+/* GAME WRAPPER SECTION */
+.finleyMatch .gameWrapper {
+	padding-top: 125px;
+	padding-bottom: 125px;
+}
+
+.finleyMatch .gameWrapper h3 {
+	margin-bottom: 25px;
+}
+
+.finleyMatch .circleWrapper {
+	height: 125px;
+	width: 125px;
+	margin: 15px auto;
+	position: relative;
+}
+
+.finleyMatch .flipped {
+	-webkit-transform: rotatey(-180deg);
+}
+
+.finleyMatch .circle {
+	width: 100%;
+	height: 100%;
+	-webkit-transform-style: preserve-3d;
+	-webkit-transition: 0.5s;
+}
+
+.finley .circle .circleFace {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	-webkit-backface-visibility: hidden;
+	z-index: 2;
+}
+
+.finleyMatch .circle .front {
+	position: absolute;
+	z-index: 1;
+	background-color: #ef073f;
+	cursor: pointer;
+	border-radius: 50%;
+	height: 125px;
+	width: 125px;
+}
+.finleyMatch .circle .back {
+	-webkit-transform: rotatey(-180deg);
+	cursor: pointer;
+}
+.finleyMatch .circle .back img {
+	-webkit-transform: rotatey(-180deg);
+	border-radius: 50%;
+	height: 125px;
+	width: 125px;
+	border: none;
+}
+
+/* --------------- MEDIA QUERIES --------------- */
+
+/* TABLET */
+@media (max-width: 991px) {
+	.finleyMatch .circle {
+		height: 100px;
+		width: 100px;
+	}
+}
+
+/* MOBILE */
+@media (max-width: 776px) {
+	.modal .playAgainButton {
+		margin-bottom: 10px;
+		width: 225px;
+		margin-right: 0;
+	}
+	.finleyMatch .topWrapper {
+		padding-top: 75px;
+		padding-bottom: 75px;
+	}
+	.finleyMatch .gameWrapper {
+		padding-top: 75px;
+		padding-bottom: 75px;
+	}
+	.finleyMatch .circle {
+		height: 125px;
+		width: 125px;
+	}
+}
+

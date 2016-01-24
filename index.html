@@ -1,0 +1,61 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width" />
+		<title>Finley Match</title>
+		<link rel="stylesheet" type="text/css" href="main.css">
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+		<script src="https://cdn.rawgit.com/nnattawat/flip/v1.0.19/dist/jquery.flip.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<div class="finleyMatch">
+
+			<!-- modal -->
+			<div class="modal fade" id="finleyModal" tabindex="-1" role="dialog" aria-labelledby="finleyModal" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-body">
+							<h3 class="completionText">You won! Nothing slips past you, gumshoe.</h3>
+							<div class="buttonWrapper">
+								<button class="playAgainButton">Play again</button>
+								<button class="toPortfolio">Check out Summer's Portfolio</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- top -->
+			<div class="topWrapper">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
+							<h1>Finley Match Game</h1>
+							<h3>There's a Finley imposter on the loose, and he's making this simple matching game extra difficult! The imposter's name is Chumley, and he's the pug of <a href="http://summermcdonald.me/" target="_blank">Summer McDonald</a>, a Frontend Engineer in SF. Click on the circles to find matching pairs, but be careful–Chumley's disguised to fool you.</h3>
+							<p class="playNow">Play Now</p>
+							<div class="downArrow">
+								<img class="arrowImg" src="assets/downArrow.png">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- game -->
+			<div class="container gameWrapper">
+				<div class="row">
+					<div class="col-xs-12">
+						<h3>Click on a dot to get started.</h3>
+					</div>
+				</div>
+				<div class="row">
+					<div class="finleyGame"></div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="app.js"></script>
+	</body>
+</html>
