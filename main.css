@@ -143,8 +143,9 @@ body {
 	font-weight: 400;
 }
 
-.finleyMatch .playNow:hover {
+.finleyMatch .playNow:hover, .finleyMatch .playNow:visited, .finleyMatch .playNow:link, .finleyMatch .playNow:active {
 	color: #ef073f;
+	text-decoration: none;
 }
 
 .finleyMatch .downArrow {
