@@ -243,7 +243,15 @@ body {
 
 /* TABLET */
 @media (max-width: 991px) {
-	.finleyMatch .circle {
+	.finleyMatch .circleWrapper {
+		height: 100px;
+		width: 100px;
+	}
+	.finleyMatch .circle .front {
+		height: 100px;
+		width: 100px;
+	}
+	.finleyMatch .circle .back img {
 		height: 100px;
 		width: 100px;
 	}
@@ -264,7 +272,17 @@ body {
 		padding-top: 75px;
 		padding-bottom: 75px;
 	}
-	.finleyMatch .circle {
+	.finleyMatch .circleWrapper {
+		height: 125px;
+		width: 125px;
+	}
+
+	.finleyMatch .circle .front {
+		height: 125px;
+		width: 125px;
+	}
+
+	.finleyMatch .circle .back img {
 		height: 125px;
 		width: 125px;
 	}
