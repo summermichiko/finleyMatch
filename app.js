@@ -30,15 +30,16 @@ $(document).ready(function() {
 			flipBackOver: function() {
 				var circle1 = finleyGame.find('#' + circleIds[0]),
 					circle2 = finleyGame.find('#' + circleIds[1]);
-					circle1.attr('src', '');
-					circle2.attr('src', '');
+					circle1.find('.circle').removeClass('flipped');
+					circle2.find('.circle').removeClass('flipped');
 					helper.resetArrays();
 			},
-			flipCircle: function(circle, imageString) {
-				var circleId = circle.attr('id');
+			flipCircle: function(circleWrapper, imageString) {
+				var circleId = circleWrapper.attr('id'),
+					circle = circleWrapper.find('.circle');
 
-				if ((circle.attr('src') === '') && (circleUrls.length < 2)) {
-					circle.attr('src', 'assets/' + imageString);
+				if (!circle.hasClass('flipped') && (circleUrls.length < 2)) {
+					circle.addClass('flipped');
 
 					// if no circles are flipped over
 					if (circleUrls.length === 0) {
@@ -76,11 +77,11 @@ $(document).ready(function() {
 					if ((i === 0 || i === 4 || i === 8) && ($(window).width() > 767)) {
 						htmlString +=
 							'<div class="col-sm-2 col-xs-6 col-sm-offset-2 col-xs-offset-0">' +
-								'<div class="circleWrapper" id="circle' + i + '">' +
+								'<div class="circleWrapper" id="circle' + i + '" data-url="' + images[i] + '">' +
 									'<div class="circle">' +
 										'<div class="circleFace front">&nbsp;</div>' +
 										'<div class="circleFace back">' +
-											'<img id="circle' + i + '" src="assets/' + images[i] + '">' +
+											'<img src="assets/' + images[i] + '">' +
 										'</div>' +
 									'</div>' +
 								'</div>' +
@@ -88,11 +89,11 @@ $(document).ready(function() {
 					} else {
 						htmlString +=
 							'<div class="col-sm-2 col-xs-6">' +
-								'<div class="circleWrapper" id="circle' + i + '">' +
+								'<div class="circleWrapper" id="circle' + i + '" data-url="' + images[i] + '">' +
 									'<div class="circle">' +
 										'<div class="circleFace front">&nbsp;</div>' +
 										'<div class="circleFace back">' +
-											'<img id="circle' + i + '" src="assets/' + images[i] + '">' +
+											'<img src="assets/' + images[i] + '">' +
 										'</div>' +
 									'</div>' +
 								'</div>' +
@@ -106,10 +107,8 @@ $(document).ready(function() {
 	helper.setNewGame();
 
 	finleyGame.on('click', '.circleWrapper', function() {
-		// var circleId = $(this).attr('id');
-		// helper.flipCircle($(this), imageString);
-        $(this).find('.circle').toggleClass('flipped');
-
+		var imageString = $(this).data('url');
+			helper.flipCircle($(this), imageString);
 	});
 
 	app.on('click', '.arrowImg', function() {
@@ -129,7 +128,7 @@ $(document).ready(function() {
 		helper.setNewGame();
 	});
 
-	app.on('click', '.toPortfolio', function() {
+	app.on('click', '.toPortfolioButton', function() {
 		window.open('http://summermcdonald.me/', '_blank');
 	});
 });

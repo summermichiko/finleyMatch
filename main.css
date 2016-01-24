@@ -83,7 +83,7 @@ body {
 	margin-right: 5px;
 }
 
-.modal .toPortfolio {
+.modal .toPortfolioButton {
 	background-color: #ef073f;
 }
 
@@ -132,8 +132,11 @@ body {
 	color: #333;
 }
 
-.finleyMatch .playNow {
+.finleyMatch .playNowWrapper {
 	text-align: center;
+}
+
+.finleyMatch .playNow {
 	color: #ef073f;
 	cursor: pointer;
 	font-size: 24px;
@@ -146,6 +149,7 @@ body {
 
 .finleyMatch .arrowImg {
 	height: 25px;
+	margin-top: 10px;
 	cursor: pointer;
 	-webkit-animation: bounce 2s infinite ease-in-out;
 	-moz-animation: bounce 2s infinite ease-in-out;
