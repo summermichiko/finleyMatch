@@ -106,23 +106,12 @@ $(document).ready(function() {
 
 	helper.setNewGame();
 
-	var userAgent = navigator.userAgent;
-
-	if ( userAgent.match( /iPad/i ) || userAgent.match( /iPhone/i ) || userAgent.match( /iPod/i )) {
-		$(document).on('click touchend', '.circleWrapper', function(e) {
-			e.stopPropagation();
-			e.preventDefault();
-			var imageString = $(this).data('url');
-				helper.flipCircle($(this), imageString);
-		});
-	} else {
-		$(document).on('click', '.circleWrapper', function(e) {
-			e.stopPropagation();
-			e.preventDefault();
-			var imageString = $(this).data('url');
-				helper.flipCircle($(this), imageString);
-		});
-	}
+	$(document).on('click touchend', '.circleWrapper', function(e) {
+		e.stopPropagation();
+		e.preventDefault();
+		var imageString = $(this).data('url');
+			helper.flipCircle($(this), imageString);
+	});
 
 	$(document).on(event, '.circleWrapper', function(e) {
 		e.stopPropagation();
