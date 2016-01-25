@@ -193,12 +193,11 @@ body {
 }
 
 .finleyMatch .flipped {
-	background-color: blue;
-	// -webkit-transform: rotatey(-180deg);
-	// -moz-transform: rotatey(-180deg);
-	// -ms-transform: rotatey(-180deg);
-	// -o-transform: rotatey(-180deg);
-	// transform: rotateY(-180deg);
+	-webkit-transform: translate(0, 0) rotatey(-180deg);
+	-moz-transform: translate(0, 0) rotatey(-180deg);
+	-ms-transform: translate(0, 0) rotatey(-180deg);
+	-o-transform: translate(0, 0) rotatey(-180deg);
+	transform: translate(0, 0) rotateY(-180deg);
 }
 
 .finleyMatch .circleWrapper {
