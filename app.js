@@ -111,13 +111,6 @@ $(document).ready(function() {
 			helper.flipCircle($(this), imageString);
 	});
 
-	$(document).on(event, '.circleWrapper', function(e) {
-		e.stopPropagation();
-		e.preventDefault();
-		var imageString = $(this).data('url');
-			helper.flipCircle($(this), imageString);
-	});
-
 	app.on('click', '.arrowImg', function() {
 		$('html, body').animate({
 			scrollTop: $(".gameWrapper").offset().top
