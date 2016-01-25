@@ -106,9 +106,7 @@ $(document).ready(function() {
 
 	helper.setNewGame();
 
-	$(document).on('click', '.circleWrapper', function(e) {
-		e.stopPropagation();
-		e.preventDefault();
+	$(document).on('click', '.circleWrapper', function() {
 		var imageString = $(this).data('url');
 			helper.flipCircle($(this), imageString);
 	});
