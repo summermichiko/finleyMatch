@@ -106,7 +106,7 @@ $(document).ready(function() {
 
 	helper.setNewGame();
 
-	$(document).on('click touchend', '.circleWrapper', function(e) {
+	$(document).on('click', '.circleWrapper', function(e) {
 		e.stopPropagation();
 		e.preventDefault();
 		var imageString = $(this).data('url');
