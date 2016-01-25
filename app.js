@@ -109,7 +109,7 @@ $(document).ready(function() {
 	var userAgent = navigator.userAgent;
 
 	if ( userAgent.match( /iPad/i ) || userAgent.match( /iPhone/i ) || userAgent.match( /iPod/i )) {
-		$(document).on('tap', '.circleWrapper', function(e) {
+		$(document).on('click touchend', '.circleWrapper', function(e) {
 			e.stopPropagation();
 			e.preventDefault();
 			var imageString = $(this).data('url');
