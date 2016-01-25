@@ -79,8 +79,8 @@ $(document).ready(function() {
 							'<div class="col-sm-2 col-xs-6 col-sm-offset-2 col-xs-offset-0">' +
 								'<div class="circleWrapper" id="circle' + i + '" data-url="' + images[i] + '">' +
 									'<div class="circle">' +
-										'<div class="circleFace front">&nbsp;</div>' +
-										'<div class="circleFace back">' +
+										'<div class="circleSide front">&nbsp;</div>' +
+										'<div class="circleSide back">' +
 											'<img src="assets/' + images[i] + '">' +
 										'</div>' +
 									'</div>' +
@@ -91,8 +91,8 @@ $(document).ready(function() {
 							'<div class="col-sm-2 col-xs-6">' +
 								'<div class="circleWrapper" id="circle' + i + '" data-url="' + images[i] + '">' +
 									'<div class="circle">' +
-										'<div class="circleFace front">&nbsp;</div>' +
-										'<div class="circleFace back">' +
+										'<div class="circleSide front">&nbsp;</div>' +
+										'<div class="circleSide back">' +
 											'<img src="assets/' + images[i] + '">' +
 										'</div>' +
 									'</div>' +
