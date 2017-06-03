@@ -56,14 +56,13 @@ body {
 }
 
 .modal .modal-body {
-	padding: 50px;
 	background-color: #fff;
+	padding: 50px;
 }
 
 .modal .completionText {
-	text-align: center;
-	margin-bottom: 20px;
 	margin-bottom: 25px;
+	text-align: center;
 }
 
 .modal .buttonWrapper {
@@ -71,10 +70,10 @@ body {
 }
 
 .modal button {
-	padding: 13px 15px;
+	border: none;
 	border-radius: 2px;
 	color: #fff;
-	border: none;
+	padding: 13px 15px;
 }
 
 .modal .playAgainButton {
@@ -101,26 +100,26 @@ body {
 
 /* TOP WRAPPER SECTION */
 .finleyMatch .topWrapper {
-	padding-top: 125px;
-	padding-bottom: 125px;
 	background-color: #efefef;
+	padding-bottom: 125px;
+	padding-top: 125px;
 }
 
 .finleyMatch h1 {
+	color: #333 !important;
+	font-weight: 400;
 	margin-top: 0;
 	margin-bottom: 20px;
 	text-align: center;
-	color: #333 !important;
-	font-weight: 400;
 }
 
 .finleyMatch h3 {
-	line-height: 35px;
-	margin-top: 0;
-	margin-bottom: 55px;
-	text-align: center;
 	color: #333 !important;
 	font-weight: 300;
+	line-height: 35px;
+	margin-bottom: 55px;
+	margin-top: 0;
+	text-align: center;
 }
 
 .finleyMatch a {
@@ -128,8 +127,8 @@ body {
 }
 
 .finleyMatch a:hover {
-	text-decoration: none;
 	color: #333;
+	text-decoration: none;
 }
 
 .finleyMatch .playNowWrapper {
@@ -154,14 +153,14 @@ body {
 }
 
 .finleyMatch .arrowImg {
-	height: 25px;
-	margin-top: 10px;
-	cursor: pointer;
 	-webkit-animation: bounce 2s infinite ease-in-out;
 	-moz-animation: bounce 2s infinite ease-in-out;
 	-ms-animation: bounce 2s infinite ease-in-out;
 	-o-animation: bounce 2s infinite ease-in-out;
 	animation: bounce 2s infinite ease-in-out;
+	cursor: pointer;
+	height: 25px;
+	margin-top: 10px;
 }
 @-webkit-keyframes bounce {
 	0%, 20%, 60%, 100% { -webkit-transform: translateY(0); }
@@ -191,8 +190,8 @@ body {
 
 /* GAME WRAPPER SECTION */
 .finleyMatch .gameWrapper {
-	padding-top: 125px;
 	padding-bottom: 125px;
+	padding-top: 125px;
 }
 
 .finleyMatch .gameWrapper h3 {
@@ -209,13 +208,12 @@ body {
 
 .finleyMatch .circleWrapper {
 	height: 125px;
-	width: 125px;
 	margin: 15px auto;
 	position: relative;
+	width: 125px;
 }
 
 .finleyMatch .circle {
-	width: 100%;
 	height: 100%;
 	-webkit-transform-style: preserve-3d;
 	-moz-transform-style: preserve-3d;
@@ -226,54 +224,55 @@ body {
 	-ms-transition: 0.5s;
 	-o-transition: 0.5s;
 	transition: 0.5s;
+	width: 100%;
 }
 
 .finley .circle .circleSide {
-	width: 100%;
 	height: 100%;
 	position: absolute;
+	width: 100%;
 	z-index: 2;
 }
 
 .finleyMatch .circle .front {
-	position: absolute;
-	z-index: 1;
-	background-color: #ef073f;
-	cursor: pointer;
-	border-radius: 50%;
-	height: 125px;
-	width: 125px;
-	border: 1px solid #fff;
 	-webkit-backface-visibility: hidden;
 	-moz-backface-visibility: hidden;
 	-ms-backface-visibility: hidden;
 	-o-backface-visibility: hidden;
 	backface-visibility: hidden;
+	background-color: #ef073f;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	cursor: pointer;
+	height: 125px;
+	position: absolute;
+	width: 125px;
+	z-index: 1;
 }
 .finleyMatch .circle .back {
-	-webkit-transform: rotatey(-180deg);
-	-moz-transform: rotatey(-180deg);
-	-ms-transform: rotatey(-180deg);
-	-o-transform: rotatey(-180deg);
-	transform: rotatey(-180deg);
 	cursor: pointer;
 	-webkit-backface-visibility: visible;
 	-moz-backface-visibility: visible;
 	-ms-backface-visibility: visible;
 	-o-backface-visibility: visible;
 	backface-visibility: visible;
-}
-
-.finleyMatch .circle .back img {
 	-webkit-transform: rotatey(-180deg);
 	-moz-transform: rotatey(-180deg);
 	-ms-transform: rotatey(-180deg);
 	-o-transform: rotatey(-180deg);
 	transform: rotatey(-180deg);
+}
+
+.finleyMatch .circle .back img {
+	border: 1px solid #fff;
 	border-radius: 50%;
 	height: 125px;
+	-webkit-transform: rotatey(-180deg);
+	-moz-transform: rotatey(-180deg);
+	-ms-transform: rotatey(-180deg);
+	-o-transform: rotatey(-180deg);
+	transform: rotatey(-180deg);
 	width: 125px;
-	border: 1px solid #fff;
 }
 
 /* --------------- MEDIA QUERIES --------------- */
@@ -298,16 +297,16 @@ body {
 @media (max-width: 776px) {
 	.modal .playAgainButton {
 		margin-bottom: 10px;
-		width: 225px;
 		margin-right: 0;
+		width: 225px;
 	}
 	.finleyMatch .topWrapper {
-		padding-top: 75px;
 		padding-bottom: 75px;
+		padding-top: 75px;
 	}
 	.finleyMatch .gameWrapper {
-		padding-top: 75px;
 		padding-bottom: 75px;
+		padding-top: 75px;
 	}
 	.finleyMatch .circleWrapper {
 		height: 125px;
@@ -324,4 +323,3 @@ body {
 		width: 125px;
 	}
 }
-
